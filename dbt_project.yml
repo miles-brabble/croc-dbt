@@ -3,7 +3,6 @@ version: "1.0.0"
 config-version: 2
 profile: "my_project"
 
-# Where dbt looks for things
 model-paths: ["models"]
 seed-paths: ["seeds"]
 macro-paths: ["macros"]
@@ -28,7 +27,7 @@ seeds:
         Observed Weight (kg): float
         Age Class: text
         Sex: text
-        Date of Observation: text    # could cast later to date
+        Date of Observation: text    
         Country/Region: text
         Habitat Type: text
         Conservation Status: text
@@ -38,7 +37,7 @@ seeds:
 models:
   my_project:
     +schema: STAGING
-    +materialized: table      # staging as physical tables (per your preference)
+    +materialized: table    
     staging:
       +schema: STAGING
       +materialized: table
