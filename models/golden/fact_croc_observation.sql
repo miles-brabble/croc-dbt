@@ -39,23 +39,16 @@ ob as (
 )
 
 select
-  -- FKs into dims
   sp.species_id,
   lo.location_id,
   dt.date_id,
   st.status_id,
   ob.observer_id,
-
-  -- degenerate/natural keys & measures
-  s.observation_id,                       -- natural key from source
+  s.observation_id,                     
   s.observed_length_m,
   s.observed_weight_kg,
-
-  -- optional descriptive attrs (keep in fact if useful)
   s.sex,
   s.habitat_type,
-
-  -- audit
   s.load_ts
 
 from s
