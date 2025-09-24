@@ -13,7 +13,8 @@
    - **Dimensions**: `dim_species`, `dim_location`, `dim_date`, `dim_observer`, `dim_conservation_status`.  
    - **Fact**: `fact_croc_observation` with measures (`observed_length_m`, `observed_weight_kg`) and foreign keys to all dims.  
    - Enforced with **tests** and optional DB constraints (`post_hook`).
-  
+
+4. **Folders** 
     - seeds/ - static/public datasets (RAW layer).
 	- scripts/ - helper ingestion scripts (fetch CSVs).
 	- staging/ - row-level cleanup (types, enums, QA flags).
