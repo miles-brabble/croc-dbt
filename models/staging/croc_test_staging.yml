@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: staging_croc
+    description: Cleaned crocodile observations (typed, normalized) from RAW.
+    columns:
+      - name: observation_id
+        tests: [not_null, unique]
+      - name: date_of_observation
+      - name: scientific_name
+      - name: conservation_status

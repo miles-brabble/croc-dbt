@@ -1,0 +1,47 @@
+name: "my_project"
+version: "1.0.0"
+config-version: 2
+profile: "my_project"
+
+# Where dbt looks for things
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+seeds:
+  +schema: RAW
+  +quote_columns: true
+  +header: true
+  my_project:
+    crocodile_species:
+      +delimiter: ","
+      +quote: '"'
+      +escape: '"'
+      +empty_as_null: true
+      +column_types:
+        Observation ID: integer
+        Common Name: text
+        Scientific Name: text
+        Family: text
+        Genus: text
+        Observed Length (m): float
+        Observed Weight (kg): float
+        Age Class: text
+        Sex: text
+        Date of Observation: text    # could cast later to date
+        Country/Region: text
+        Habitat Type: text
+        Conservation Status: text
+        Observer Name: text
+        Notes: text
+
+models:
+  my_project:
+    +schema: STAGING
+    +materialized: table      # staging as physical tables (per your preference)
+    staging:
+      +schema: STAGING
+      +materialized: table
+    golden:
+      +schema: GOLDEN
+      +materialized: table
