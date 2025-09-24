@@ -42,7 +42,7 @@ normalized as (
         end as sex,
 
         date_of_observation,
-        initcap(country_region) as country_region,   -- light normalization
+        initcap(country_region) as country_region, 
         case
             when lower(habitat_type_raw) like '%swamp%' then 'Swamp'
             when lower(habitat_type_raw) like '%river%' then 'River'
