@@ -12,10 +12,9 @@ with d as (
 )
 
 select
-  -- integer PK that’s friendly for partitioning / BI tools
   (extract(year from dte)::int * 10000
    + extract(month from dte)::int * 100
-   + extract(day   from dte)::int)                             as date_id,   -- PK (YYYYMMDD)
+   + extract(day   from dte)::int)                             as date_id,   
   dte                                                          as date,
   extract(year  from dte)::int                                 as year,
   extract(month from dte)::int                                 as month,
