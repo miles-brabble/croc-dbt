@@ -14,8 +14,8 @@
    - **Fact**: `fact_croc_observation` with measures (`observed_length_m`, `observed_weight_kg`) and foreign keys to all dims.  
    - Enforced with **tests** and optional DB constraints (`post_hook`).
   
-  •	seeds/ - static/public datasets (RAW layer).
-	•	scripts/ - helper ingestion scripts (fetch CSVs).
-	•	staging/ - row-level cleanup (types, enums, QA flags).
-	•	golden/ - star schema (dims and fact) for BI & semantic layers.
-	•	macros/ - overrides dbt’s default schema naming to keep exactly RAW, STAGING, GOLDEN.
+    - seeds/ - static/public datasets (RAW layer).
+	- scripts/ - helper ingestion scripts (fetch CSVs).
+	- staging/ - row-level cleanup (types, enums, QA flags).
+	- golden/ - star schema (dims and fact) for BI & semantic layers.
+	- macros/ - overrides dbt’s default schema naming to keep exactly RAW, STAGING, GOLDEN.
