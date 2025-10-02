@@ -1,3 +1,7 @@
+<img width="1520" height="470" alt="image" src="https://github.com/user-attachments/assets/45167722-9cf5-4d88-9332-68abf5d27aef" />
+
+
+
 ## 🐊 Data Flow
 
 1. **RAW (seeds/)**  
